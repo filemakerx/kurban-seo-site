@@ -43,6 +43,7 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -267,8 +268,8 @@
                 <p class="text-blue-100">Kurban360 hakkında bilgi almak veya sunum talep etmek için formu doldurun.</p>
             </div>
 
-            <form class="bg-white rounded-xl p-8 shadow-2xl border border-blue-200"
-                action="https://formspree.io/f/mjglvdey" method="POST">
+            <form class="bg-white rounded-xl p-8 shadow-2xl border border-blue-200" action="/api/contact"
+                method="POST">
                 <div class="mb-6">
                     <label class="block text-gray-700 font-bold mb-2">Adınız</label>
                     <input type="text" name="name"
@@ -288,6 +289,10 @@
                     <textarea name="message"
                         class="w-full border-2 border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500 h-32"
                         required></textarea>
+                </div>
+
+                <div class="mb-6">
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAADG2Beiv2TzIOrUp" data-theme="light"></div>
                 </div>
 
                 <button type="submit"
