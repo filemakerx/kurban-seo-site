@@ -9,13 +9,16 @@ export async function onRequestPost({ request, env }) {
     const formData = await request.formData();
     const token = formData.get("cf-turnstile-response");
     const origin = new URL(request.url).origin;
+    const referrer = request.headers.get("Referer") || origin;
+    const redirectUrl = new URL(referrer);
+    const returnUrl = redirectUrl.origin === origin ? redirectUrl.origin + redirectUrl.pathname : origin;
 
     if (!env.TURNSTILE_SECRET_KEY) {
         return new Response("Turnstile secret key is not configured.", { status: 500 });
     }
 
     if (!token) {
-        return redirectWithStatus(origin, "verification-missing");
+        return redirectWithStatus(returnUrl, "verification-missing");
     }
 
     const verifyData = new FormData();
@@ -30,7 +33,7 @@ export async function onRequestPost({ request, env }) {
     const verifyResult = await verifyResponse.json();
 
     if (!verifyResult.success) {
-        return redirectWithStatus(origin, "verification-failed");
+        return redirectWithStatus(returnUrl, "verification-failed");
     }
 
     formData.delete("cf-turnstile-response");
@@ -44,10 +47,10 @@ export async function onRequestPost({ request, env }) {
     });
 
     if (!formspreeResponse.ok) {
-        return redirectWithStatus(origin, "send-failed");
+        return redirectWithStatus(returnUrl, "send-failed");
     }
 
-    return redirectWithStatus(origin, "sent");
+    return redirectWithStatus(returnUrl, "sent");
 }
 
 export function onRequestGet() {
