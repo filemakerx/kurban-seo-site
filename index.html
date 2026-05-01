@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Kurban360 - Kurban satış programı, yazılımı ve takip sistemi. Hisse takibi, sürü yönetimi, barkodlu teslimat sistemi.">
+    <meta name="author" content="Kurban360">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://kurban360.com/">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="tr_TR">
+    <meta property="og:site_name" content="Kurban360">
+    <meta property="og:title" content="Kurban360 - Kurban Satış Programı ve Takip Sistemi">
+    <meta property="og:description"
+        content="Hisse takibi, sürü yönetimi, barkodlu teslimat ve kesim sırası takibi için kurban satış programı.">
+    <meta property="og:url" content="https://kurban360.com/">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Kurban360 - Kurban Satış Programı ve Takip Sistemi">
+    <meta name="twitter:description"
+        content="Hisse takibi, sürü yönetimi, barkodlu teslimat ve kesim sırası takibi için kurban satış programı.">
+    <title>Kurban360 - Kurban Satış Programı ve Takip Sistemi</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap"
+        rel="stylesheet">
+
+    <!-- JSON-LD Schema Markup -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org/",
+      "@type": "SoftwareApplication",
+      "name": "Kurban360",
+      "url": "https://kurban360.com/",
+      "description": "Kurban satış programı, yazılımı ve takip sistemi",
+      "applicationCategory": "BusinessApplication",
+      "operatingSystem": "Windows",
+      "brand": {
+        "@type": "Brand",
+        "name": "Kurban360"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Kurban360",
+        "url": "https://kurban360.com/"
+      },
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "TRY",
+        "description": "Ücretsiz Abonelik + Tek Seferlik Kurulum Ücreti"
+      },
+      "aggregateRating": {
+        "@type": "AggregateRating",
+        "ratingValue": "4.8",
+        "ratingCount": "245"
+      }
+    }
+    </script>
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+
+        h1,
+        h2,
+        h3 {
+            font-family: 'Playfair Display', serif;
+        }
+
+        .glassmorphism {
+            background: rgba(37, 99, 235, 0.05);
+            border: 1px solid rgba(37, 99, 235, 0.1);
+        }
+
+        .gradient-blue {
+            background: linear-gradient(135deg, #1E3A8A 0%, #2563EB 100%);
+        }
+
+        .btn-blue {
+            background-color: #0066FF;
+            color: white;
+        }
+
+        .btn-blue:hover {
+            background-color: #0052CC;
+        }
+
+        .btn-orange {
+            background-color: #FF7A00;
+            color: white;
+        }
+
+        .btn-orange:hover {
+            background-color: #E66A00;
+        }
+
+        .nav-item {
+            transition: all 0.3s ease;
+        }
+
+        .nav-item:hover {
+            color: #0066FF;
+        }
+
+        .features-ticker {
+            overflow: hidden;
+            white-space: nowrap;
+        }
+
+        .features-ticker-track {
+            animation: ticker-scroll 28s linear infinite;
+            display: inline-flex;
+            min-width: max-content;
+        }
+
+        .features-ticker:hover .features-ticker-track {
+            animation-play-state: paused;
+        }
+
+        @keyframes ticker-scroll {
+            from {
+                transform: translateX(0);
+            }
+
+            to {
+                transform: translateX(-50%);
+            }
+        }
+
+        @media (max-width: 768px) {
+            .mobile-menu {
+                display: none;
+            }
+
+            .mobile-menu.active {
+                display: flex;
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-white text-gray-800">
+
+    <!-- FREE Banner -->
+    <div
+        class="bg-gradient-to-r from-green-500 to-emerald-600 text-white py-3 px-4 sm:px-6 lg:px-8 text-center font-bold text-lg shadow-lg">
+        🎉 TAMAMEN ÜCRETSİZ - Kurban360 Yazılımı Sezonluk Abonelik Ücretsiz!
+    </div>
+
+    <!-- Features Ticker -->
+    <div class="bg-gray-50 text-gray-700 py-2 text-sm border-b border-gray-200 features-ticker">
+        <div class="features-ticker-track">
+            <div class="flex items-center gap-8 px-4 sm:px-6 lg:px-8">
+                <span>Hisse Takibi</span>
+                <span>Canlı Sürü Yönetimi</span>
+                <span>Barkodlu Teslimat</span>
+                <span>Kesim Sırası Takibi</span>
+                <span>SMS Bilgilendirme</span>
+                <span>Stok ve Finans Kontrolü</span>
+                <span>Yerel Veri Güvenliği</span>
+                <span>Hızlı Kurulum</span>
+            </div>
+            <div class="flex items-center gap-8 px-4 sm:px-6 lg:px-8" aria-hidden="true">
+                <span>Hisse Takibi</span>
+                <span>Canlı Sürü Yönetimi</span>
+                <span>Barkodlu Teslimat</span>
+                <span>Kesim Sırası Takibi</span>
+                <span>SMS Bilgilendirme</span>
+                <span>Stok ve Finans Kontrolü</span>
+                <span>Yerel Veri Güvenliği</span>
+                <span>Hızlı Kurulum</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md sticky top-0 z-50 border-b border-gray-200">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <div class="flex items-center">
+                    <a href="index.html"
+                        class="text-2xl font-bold gradient-blue bg-clip-text text-transparent no-underline">Kurban360</a>
+                </div>
+
+                <!-- Desktop Menu -->
+                <div class="hidden md:flex space-x-8">
+                    <a href="index.html" class="nav-item text-gray-700 hover:text-blue-600 font-medium">Ana Sayfa</a>
+                    <a href="#hakkimizda" class="nav-item text-gray-700 hover:text-blue-600 font-medium">Hakkımızda</a>
+                    <a href="#farkimiz" class="nav-item text-gray-700 hover:text-blue-600 font-medium">Farkımız</a>
+                    <a href="#features" class="nav-item text-gray-700 hover:text-blue-600 font-medium">Tanıtım</a>
+                    <a href="#referanslar"
+                        class="nav-item text-gray-700 hover:text-blue-600 font-medium">Referanslar</a>
+                    <a href="#pricing" class="nav-item text-gray-700 hover:text-blue-600 font-medium">Fiyat</a>
+                    <a href="#contact" class="nav-item text-gray-700 hover:text-blue-600 font-medium">İletişim</a>
+                </div>
+
+                <!-- Mobile Menu Button -->
+                <button id="menuBtn" class="md:hidden flex flex-col gap-1.5">
+                    <span class="w-6 h-0.5 bg-gray-700 block"></span>
+                    <span class="w-6 h-0.5 bg-gray-700 block"></span>
+                    <span class="w-6 h-0.5 bg-gray-700 block"></span>
+                </button>
+            </div>
+
+            <!-- Mobile Menu -->
+            <div id="mobileMenu" class="mobile-menu hidden md:hidden flex-col gap-4 pb-4">
+                <a href="index.html" class="nav-item text-gray-700 hover:text-blue-600 font-medium">Ana Sayfa</a>
+                <a href="#hakkimizda" class="nav-item text-gray-700 hover:text-blue-600 font-medium">Hakkımızda</a>
+                <a href="#farkimiz" class="nav-item text-gray-700 hover:text-blue-600 font-medium">Farkımız</a>
+                <a href="#features" class="nav-item text-gray-700 hover:text-blue-600 font-medium">Tanıtım</a>
+                <a href="#referanslar" class="nav-item text-gray-700 hover:text-blue-600 font-medium">Referanslar</a>
+                <a href="#pricing" class="nav-item text-gray-700 hover:text-blue-600 font-medium">Fiyat</a>
+                <a href="#contact" class="nav-item text-gray-700 hover:text-blue-600 font-medium">İletişim</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="text-gray-900 py-16 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-4xl mx-auto text-center">
+            <h1 class="text-4xl md:text-5xl font-bold mb-6 leading-tight text-gray-900">Kurbanlık Takip Programı ve
+                Besici Takip Yazılımında Tam Kontrol!</h1>
+            <p class="text-lg text-gray-600 mb-8">En kapsamlı kurbanlık takip programı ve <strong>kurban satış
+                    takibi uygulaması</strong> ile hisseli, müstakil
+                veya baskül satış işlemlerinizi kolaylaştırın. Tüm hayvan kayıt, finans, kesim sırası ve SMS
+                bilgilendirme süreçlerinizi tek ekrandan profesyonelce yönetin.</p>
+            <div class="flex flex-col md:flex-row gap-4 mb-8 justify-center">
+                <a href="#contact"
+                    class="btn-blue px-8 py-3 rounded-lg font-bold text-lg hover:shadow-lg transition flex items-center justify-center gap-2">
+                    🛒 Şimdi Sunum İste
+                </a>
+                <a href="#features"
+                    class="btn-orange px-8 py-3 rounded-lg font-bold text-lg hover:shadow-lg transition flex items-center justify-center gap-2">
+                    📋 Uygulamanın İçeriği
+                </a>
+            </div>
+            <p class="text-sm text-gray-500">✓ Hızlı Kurulum • ✓ Ücretsiz Danışmanlık • ✓ 24/7 Teknik Destek</p>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="hakkimizda" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-4xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6 text-gray-900">Hakkımızda</h2>
+            <p class="text-lg text-gray-600 mb-4">Kurban360, kurban satış sürecini daha düzenli, hızlı ve güvenilir
+                yönetmek isteyen işletmeler için geliştirilmiş bir takip sistemidir.</p>
+            <p class="text-lg text-gray-600">Hisse takibi, hayvan kayıtları, kesim sırası, teslimat ve müşteri
+                iletişimi gibi sezonun kritik adımlarını tek ekranda toplar.</p>
+        </div>
+    </section>
+
+    <!-- Difference Section -->
+    <section id="farkimiz" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-7xl mx-auto">
+            <div class="max-w-3xl mx-auto text-center mb-12">
+                <h2 class="text-4xl font-bold mb-4 text-gray-900">Farkımız</h2>
+                <p class="text-lg text-gray-600">Kurban360, kurban sezonunun gerçek saha ihtiyaçlarına göre tasarlanır:
+                    hızlı kurulur, kolay kullanılır ve satıştan teslimata kadar tüm süreci tek yerden yönetir.</p>
+            </div>
+
+            <div class="grid md:grid-cols-3 gap-8">
+                <div class="border border-gray-200 rounded-xl p-8 bg-gray-50">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Sezona Hazır Kurulum</h3>
+                    <p class="text-gray-600">Aylara yayılan karmaşık kurulumlar yerine, Kurban Bayramı sürecine uygun
+                        hızlı başlangıç ve pratik kullanım sunar.</p>
+                </div>
+
+                <div class="border border-gray-200 rounded-xl p-8 bg-gray-50">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Saha Odaklı İş Akışı</h3>
+                    <p class="text-gray-600">Hisse, hayvan, ödeme, kesim sırası ve teslimat adımlarını işletmenizin
+                        günlük akışına uygun şekilde bir araya getirir.</p>
+                </div>
+
+                <div class="border border-gray-200 rounded-xl p-8 bg-gray-50">
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Veri Her Zaman Elinizin Altında</h3>
+                    <p class="text-gray-600">Kayıtlarınız düzenli olarak otomatik yedeklenir. Yedekler yalnızca yerel
+                        kaynaklarda tutulmaz; Google Drive gibi kaynaklara da ücretsiz olarak alınabilir.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Features Section -->
+    <section id="features" class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-16 text-gray-900">Uygulamanın İçeriği</h2>
+
+            <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Feature 1: Hisse Takibi -->
+                <div class="glassmorphism p-8 rounded-xl hover:shadow-xl transition bg-white border border-blue-100">
+                    <svg class="w-10 h-10 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z">
+                        </path>
+                    </svg>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Hisse Takibi</h3>
+                    <p class="text-gray-600">Kurban hisselerini gerçek zamanlı olarak takip edin. Kapı kapı
+                        satışlarınızı sistematik bir şekilde yönetin.</p>
+                </div>
+
+                <!-- Feature 2: Sürü Yönetimi -->
+                <div class="glassmorphism p-8 rounded-xl hover:shadow-xl transition bg-white border border-blue-100">
+                    <svg class="w-10 h-10 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 110-4m0 4v2m0-6V4">
+                        </path>
+                    </svg>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Sürü Yönetimi</h3>
+                    <p class="text-gray-600">Tüm hayvan stokunuzu veritabanında güvenli bir şekilde saklayın ve anında
+                        raporlar alın.</p>
+                </div>
+
+                <!-- Feature 3: Barkodlu Teslimat -->
+                <div class="glassmorphism p-8 rounded-xl hover:shadow-xl transition bg-white border border-blue-100">
+                    <svg class="w-10 h-10 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12h6m-6 4h6m2 5H7a2 2 0 01-2-2V5a2 2 0 012-2h5.586a1 1 0 01.707.293l5.414 5.414a1 1 0 01.293.707V19a2 2 0 01-2 2z">
+                        </path>
+                    </svg>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Barkodlu Teslimat</h3>
+                    <p class="text-gray-600">Kesim takibi ve teslimat yönetimi için barkod tabanlı sistem ile hızlı ve
+                        güvenli işlem yapın.</p>
+                </div>
+
+                <!-- Feature 4: Kesim Takibi -->
+                <div class="glassmorphism p-8 rounded-xl hover:shadow-xl transition bg-white border border-blue-100">
+                    <svg class="w-10 h-10 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
+                    </svg>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Kesim Takibi</h3>
+                    <p class="text-gray-600">Kesim süreci ve dağıtımı adım adım izleyin. Müşteri memnuniyetini arttırın.
+                    </p>
+                </div>
+
+                <!-- Feature 5: Stok Yönetimi -->
+                <div class="glassmorphism p-8 rounded-xl hover:shadow-xl transition bg-white border border-blue-100">
+                    <svg class="w-10 h-10 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M20 7l-8-4-8 4m0 0l8-4m0 0l8 4m-8 4l-8-4m0 0l8 4m0 0l8-4"></path>
+                    </svg>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Hayvan Stok Takibi</h3>
+                    <p class="text-gray-600">Besiciler için sürü takip yazılımı. Tüm hayvanlara ait bilgileri merkezi
+                        veritabanında tutun.</p>
+                </div>
+
+                <!-- Feature 6: Sıra Takibi -->
+                <div class="glassmorphism p-8 rounded-xl hover:shadow-xl transition bg-white border border-blue-100">
+                    <svg class="w-10 h-10 text-blue-600 mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"
+                        aria-hidden="true">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M9 5H7a2 2 0 00-2 2v12a2 2 0 002 2h10a2 2 0 002-2V7a2 2 0 00-2-2h-2M9 5a2 2 0 002 2h2a2 2 0 002-2M9 5a2 2 0 012-2h2a2 2 0 012 2">
+                        </path>
+                    </svg>
+                    <h3 class="text-xl font-bold mb-3 text-gray-900">Sıra Takip Sistemi</h3>
+                    <p class="text-gray-600">Müşteri siparişlerini organize olarak yönetin. İşleme alınan siparişleri
+                        gerçek zamanlı izleyin.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- References Section -->
+    <section id="referanslar" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-5xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6 text-gray-900">Referanslar</h2>
+            <p class="text-lg text-gray-600 mb-10">Kurban360'ı tercih eden kurum ve işletmeler.</p>
+            <div class="grid md:grid-cols-3 gap-6">
+                <div class="border border-gray-200 rounded-xl p-8 bg-gray-50 flex items-center justify-center min-h-36">
+                    <div class="text-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRCcvbRwYKXW5C1Dj3smqTcwI2iPOatg-B0-g&s"
+                            alt="Afyon Yıldırım Et logosu" width="160" height="80" loading="lazy"
+                            class="max-h-20 mx-auto mb-4 object-contain">
+                        <p class="text-2xl font-bold text-gray-900">Afyon Yıldırım Et</p>
+                        <p class="text-sm text-gray-500 mt-2">Referans</p>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-xl p-8 bg-gray-50 flex items-center justify-center min-h-36">
+                    <div class="text-center">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTNRXjOVd1y2VsxlAmKXmEWeum8VIb0nYW0ww&s"
+                            alt="Yüz Akı Derneği logosu" width="160" height="80" loading="lazy"
+                            class="max-h-20 mx-auto mb-4 object-contain">
+                        <p class="text-2xl font-bold text-gray-900">Yüz Akı Derneği</p>
+                        <p class="text-sm text-gray-500 mt-2">Referans</p>
+                    </div>
+                </div>
+                <div class="border border-gray-200 rounded-xl p-8 bg-gray-50 flex items-center justify-center min-h-36">
+                    <div class="text-center">
+                        <img src="https://somuncubabavakfi.org/wp-content/uploads/2023/03/cropped-Adsiz-tasarim-300x300.png"
+                            alt="Somuncu Baba Vakfı logosu" width="160" height="80" loading="lazy"
+                            class="max-h-20 mx-auto mb-4 object-contain">
+                        <p class="text-2xl font-bold text-gray-900">Somuncu Baba Vakfı</p>
+                        <p class="text-sm text-gray-500 mt-2">Referans</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section id="pricing" class="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-4xl font-bold mb-6 text-gray-900">Fiyatlandırma</h2>
+            <div class="text-left bg-blue-50 border border-blue-200 rounded-xl p-8">
+                <p class="text-xl text-gray-700 font-semibold mb-4">Her yıl sadece bakım ücreti alınır.</p>
+                <p class="text-gray-700 mb-3">Veriler kesinlikle şifrelidir.</p>
+                <p class="text-gray-700">Uygulama ve veriler kişide ya da kurumda kalır; tasarlayan taraf verileri
+                    alamaz ve sisteme giriş yapamaz.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Requirements Section -->
+    <section id="teknik-gereksinimler" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">Teknik Gereksinimler & Güvenlik</h2>
+            <p class="text-center text-gray-600 mb-12 max-w-2xl mx-auto">Kurban360 yazılımını kullanmaya başlamak için
+                minimum teknik gereksinimler ve güvenlik bilgisi</p>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- System Requirements -->
+                <div class="bg-white rounded-xl p-8 shadow-lg border-t-4 border-blue-600">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Sistem Gereksinimleri</h3>
+                    <div class="space-y-4">
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" fill="currentColor"
+                                viewBox="0 0 20 20" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-gray-900">Standart Bilgisayar</p>
+                                <p class="text-gray-600 text-sm">Windows, Mac veya Linux üzerinde çalışır</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" fill="currentColor"
+                                viewBox="0 0 20 20" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-gray-900">İnternet Bağlantısı</p>
+                                <p class="text-gray-600 text-sm">Stabil internet erişimi gereklidir</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start gap-3">
+                            <svg class="w-6 h-6 text-blue-600 flex-shrink-0 mt-1" fill="currentColor"
+                                viewBox="0 0 20 20" aria-hidden="true">
+                                <path fill-rule="evenodd"
+                                    d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" />
+                            </svg>
+                            <div>
+                                <p class="font-semibold text-gray-900">Modern Web Tarayıcı</p>
+                                <p class="text-gray-600 text-sm">Chrome, Firefox, Safari veya Edge</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Security & Privacy -->
+                <div class="bg-white rounded-xl p-8 shadow-lg border-t-4 border-green-600">
+                    <h3 class="text-2xl font-bold mb-4 text-gray-900">Veri Güvenliği</h3>
+                    <div class="space-y-4">
+                        <div class="bg-green-50 border border-green-200 rounded-lg p-4">
+                            <p class="text-gray-900 font-semibold mb-2">🔒 Yerel Veri Depolaması</p>
+                            <p class="text-gray-700 text-sm">Verileriniz internet ortamına (buluta) açılmaz, yerel
+                                sisteminizde tutulur.</p>
+                        </div>
+                        <div class="bg-blue-50 border border-blue-200 rounded-lg p-4">
+                            <p class="text-gray-900 font-semibold mb-2">🛡️ Sürekli Güncellemeler</p>
+                            <p class="text-gray-700 text-sm">Sistemin güvenliği ve güncelliği için internet erişimi
+                                gereklidir. Bu sayede verileriniz her zamankinden daha güvende olur.</p>
+                        </div>
+                        <div class="bg-indigo-50 border border-indigo-200 rounded-lg p-4">
+                            <p class="text-gray-900 font-semibold mb-2">✅ Sertifikalı Şifreleme</p>
+                            <p class="text-gray-700 text-sm">Tüm iletişim kanalları sertifikalı şifreleme ile
+                                korunmaktadır.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section class="py-20 px-4 sm:px-6 lg:px-8 bg-gray-50">
+        <div class="max-w-7xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">Son Blog Yazıları</h2>
+            <p class="text-center text-gray-600 mb-16">Kurban satış yazılımı ve takip sistemi hakkında en güncel
+                bilgiler</p>
+
+            <div class="grid md:grid-cols-2 gap-8">
+                <!-- Blog Card 1 -->
+                <article class="bg-white rounded-xl overflow-hidden hover:shadow-xl transition border border-gray-200">
+                    <div class="h-48 bg-gradient-to-r from-blue-600 to-indigo-600"></div>
+                    <div class="p-8">
+                        <p class="text-blue-600 font-semibold mb-2">📋 Yazılım Rehberi</p>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Kurban Satış Takip Programı Nedir?</h3>
+                        <p class="text-gray-600 mb-4">Modern kurban satış programları, hisse takibi ve sürü yönetimi
+                            için özel olarak tasarlanmış yazılımlardır. İşletmenizi nasıl optimize edebilirsiniz?</p>
+                        <a href="blog/kurban-satis-takip-programi.html"
+                            class="inline-block text-blue-600 hover:text-blue-800 font-bold">Devamını Oku →</a>
+                    </div>
+                </article>
+
+                <!-- Blog Card 2 -->
+                <article class="bg-white rounded-xl overflow-hidden hover:shadow-xl transition border border-gray-200">
+                    <div class="h-48 bg-gradient-to-r from-blue-600 to-indigo-600"></div>
+                    <div class="p-8">
+                        <p class="text-blue-600 font-semibold mb-2">🏷️ Teknoloji</p>
+                        <h3 class="text-2xl font-bold mb-3 text-gray-900">Barkodlu Teslimat Sistemi Avantajları</h3>
+                        <p class="text-gray-600 mb-4">Barkodlu teslimat sistemi, kurban satışlarında hız ve doğruluğu
+                            arttırır. Kesim takibi ve müşteri memnuniyeti nasıl sağlanır?</p>
+                        <a href="blog/barkodlu-teslimat-sistemi.html"
+                            class="inline-block text-blue-600 hover:text-blue-800 font-bold">Devamını Oku →</a>
+                    </div>
+                </article>
+            </div>
+
+            <div class="text-center mt-12">
+                <a href="blog/index.html"
+                    class="btn-blue px-8 py-3 rounded-lg font-bold hover:shadow-lg transition inline-block">Tüm Blog
+                    Yazılarını Gör</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-20 px-4 sm:px-6 lg:px-8 bg-gradient-to-br from-blue-50 to-indigo-50">
+        <div class="max-w-3xl mx-auto">
+            <h2 class="text-4xl font-bold text-center mb-4 text-gray-900">Bizimle İletişime Geçin</h2>
+            <p class="text-center text-gray-600 mb-12">Kurban satış programı hakkında sorularınız mı var? Hemen bize
+                yazın!</p>
+
+            <form class="bg-white rounded-xl p-8 shadow-2xl border border-gray-200"
+                action="https://formspree.io/f/mjglvdey" method="POST">
+                <!-- Target Email: filemakerx@gmail.com -->
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-bold mb-2">Adınız</label>
+                    <input type="text" name="name"
+                        class="w-full border-2 border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"
+                        required>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-bold mb-2">E-posta</label>
+                    <input type="email" name="email"
+                        class="w-full border-2 border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500"
+                        required>
+                </div>
+
+                <div class="mb-6">
+                    <label class="block text-gray-700 font-bold mb-2">Mesaj</label>
+                    <textarea name="message"
+                        class="w-full border-2 border-gray-300 rounded-lg px-4 py-2 focus:outline-none focus:border-blue-500 h-32"
+                        required></textarea>
+                </div>
+
+                <div class="mb-6">
+                    <div class="cf-turnstile" data-sitekey="0x4AAAAAADG2Beiv2TzIOrUp" data-theme="light"></div>
+                </div>
+
+                <button type="submit"
+                    class="btn-blue w-full py-3 rounded-lg font-bold hover:shadow-lg transition">Gönder</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-gray-300 py-12 px-4 sm:px-6 lg:px-8">
+        <div class="max-w-7xl mx-auto">
+            <div class="grid md:grid-cols-4 gap-8 mb-8">
+                <div>
+                    <h3 class="text-white font-bold mb-4">Kurban360</h3>
+                    <p class="text-sm">Kurban satış programı ve takip sistemi</p>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Ürün</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#features" class="hover:text-blue-400">Özellikler</a></li>
+                        <li><a href="#pricing" class="hover:text-blue-400">Fiyatlandırma</a></li>
+                        <li><a href="blog/index.html" class="hover:text-blue-400">Blog</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Şirket</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#contact" class="hover:text-blue-400">İletişim</a></li>
+                        <li><a href="#hakkimizda" class="hover:text-blue-400">Hakkımızda</a></li>
+                        <li><a href="#teknik-gereksinimler" class="hover:text-blue-400">Güvenlik</a></li>
+                    </ul>
+                </div>
+                <div>
+                    <h4 class="text-white font-bold mb-4">Destek</h4>
+                    <ul class="space-y-2 text-sm">
+                        <li><a href="#contact" class="hover:text-blue-400">Destek Talebi</a></li>
+                        <li><a href="#features" class="hover:text-blue-400">Özellikler</a></li>
+                        <li><a href="#teknik-gereksinimler" class="hover:text-blue-400">Teknik Gereksinimler</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="border-t border-gray-700 pt-8 text-center">
+                <p class="text-sm">&copy; 2026 Kurban360. Tüm hakları saklıdır.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menuBtn');
+        const mobileMenu = document.getElementById('mobileMenu');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+
+        // Close menu when link is clicked
+        document.querySelectorAll('#mobileMenu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+
+        // Form Turnstile Validation
+        document.querySelector('form').addEventListener('submit', function (e) {
+            const response = document.querySelector('[name="cf-turnstile-response"]')?.value;
+            if (!response) {
+                e.preventDefault();
+                alert('Lütfen doğrulama işlemini tamamlayınız.');
+                return false;
+            }
+        });
+    </script>
+</body>
+
+</html>
