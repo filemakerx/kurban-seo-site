@@ -61,7 +61,6 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -568,10 +567,6 @@
                         required></textarea>
                 </div>
 
-                <div class="mb-6">
-                    <div class="cf-turnstile" data-sitekey="0x4AAAAAADG2Beiv2TzIOrUp" data-theme="light"></div>
-                </div>
-
                 <button type="submit"
                     class="btn-blue w-full py-3 rounded-lg font-bold hover:shadow-lg transition">Gönder</button>
             </form>
@@ -634,15 +629,6 @@
             });
         });
 
-        // Form Turnstile Validation
-        document.querySelector('form').addEventListener('submit', function (e) {
-            const response = document.querySelector('[name="cf-turnstile-response"]')?.value;
-            if (!response) {
-                e.preventDefault();
-                alert('Lütfen doğrulama işlemini tamamlayınız.');
-                return false;
-            }
-        });
     </script>
 </body>
 
