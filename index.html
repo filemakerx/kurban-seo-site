@@ -61,7 +61,6 @@
     </script>
 
     <script src="https://cdn.tailwindcss.com"></script>
-    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
     <style>
         body {
             font-family: 'Inter', sans-serif;
@@ -544,7 +543,7 @@
             <p class="text-center text-gray-600 mb-12">Kurban satış programı hakkında sorularınız mı var? Hemen bize
                 yazın!</p>
 
-            <form class="bg-white rounded-xl p-8 shadow-2xl border border-gray-200" action="/api/contact"
+            <form class="bg-white rounded-xl p-8 shadow-2xl border border-gray-200" action="https://formspree.io/f/mzdodbov"
                 method="POST">
                 <!-- Target Email: filemakerx@gmail.com -->
                 <div class="mb-6">
@@ -568,9 +567,6 @@
                         required></textarea>
                 </div>
 
-                <div class="mb-6">
-                    <div class="cf-turnstile" data-sitekey="0x4AAAAAADG2Beiv2TzIOrUp" data-theme="light"></div>
-                </div>
 
                 <button type="submit"
                     class="btn-blue w-full py-3 rounded-lg font-bold hover:shadow-lg transition">Gönder</button>
